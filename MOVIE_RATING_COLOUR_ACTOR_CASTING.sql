@@ -1,12 +1,16 @@
 -- The IF EXISTS condition/syntax (below) only works on SQL Server 2016 and later & Azure
-
-/*
-CREATE DATABASE ICTPRG431_Query_5_Sub_Queries_and_Vertical_Join_Tasks;
+USE tempdb;
 GO
 
-USE ICTPRG431_Query_5_Sub_Queries_and_Vertical_Join_Tasks;
+DROP DATABASE IF EXISTS ICTPRG431_TSQL_5_PRACTICE_AT_TSQL_and_Transactions;
 GO
-*/
+
+CREATE DATABASE ICTPRG431_TSQL_5_PRACTICE_AT_TSQL_and_Transactions;
+GO
+
+USE ICTPRG431_TSQL_5_PRACTICE_AT_TSQL_and_Transactions;
+GO
+
 
 DROP TABLE IF EXISTS CASTING9468;
 DROP TABLE IF EXISTS ACTOR9468;
@@ -2953,5 +2957,6 @@ INSERT INTO CASTING9468 (Castid, ActorNo,MovieNo) values (2055,6949,9486);
 
 
 
--- 1
+SELECT *
+FROM information_schema.tables;
 

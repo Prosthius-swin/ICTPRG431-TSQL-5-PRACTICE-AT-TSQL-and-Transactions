@@ -1,0 +1,22 @@
+USE ICTPRG431_TSQL_5_PRACTICE_AT_TSQL_and_Transactions;
+GO
+
+-- 1
+-- Create a view which shows the number (count) of castings for each actor
+-- (including those without any castings)
+DROP VIEW IF EXISTS "9468_CASTING_SUMMARY"
+GO
+CREATE VIEW "9468_CASTING_SUMMARY" AS
+SELECT A.FULLNAME, A.GENDER, COUNT(C.ACTORNO) AS CASTING_COUNT
+FROM ACTOR9468 A
+INNER JOIN CASTING9468 C 
+ON A.ACTORNO = C.ACTORNO
+GROUP BY A.FULLNAME, A.GENDER
+
+SELECT * FROM "9468_CASTING_SUMMARY";
+
+SELECT *
+FROM information_schema.tables;
+
+-- 2
+
